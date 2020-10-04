@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: simple_cms_development
+  username: ENV['simple_cms_development_username']
+  password: ENV['simple_cms_development_password']
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
