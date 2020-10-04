@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   #root route
-  root 'demo#index'
+  #root 'demo#index'
+  match "/", :to => "demo#index", :via => :get
 
-  get 'demo/index'
-
+  #match route
+  match "demo/index", "to" => "demo#index", :via => :get
 
   #default route
-  get ':controller(/:action(/:id))'
+  match ':controller(/:action(/:id))', :via => :get
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
