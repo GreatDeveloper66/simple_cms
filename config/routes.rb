@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  match "jim/jim", :to => "jim#jim", :via => :get
+  #get 'jim/jim'
   #root route
   #root 'demo#index'
   match "/", :to => "demo#index", :via => :get
